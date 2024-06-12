@@ -1,0 +1,101 @@
+main {
+  background: #000000;
+  color: #fff;
+  font-family: sans-serif;
+  height: 100%;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+section {
+  margin: auto;
+  width: 170px;
+}
+
+.btn {
+  background: #a52df4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  width: 80px;
+}
+
+.btn.btn-yes {
+  display: block;
+  position: fixed;
+}
+
+.btn.btn-no {
+  position: absolute;
+}
+
+/* Coração pulsante */
+
+.loading-heart {
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: auto auto 30px auto;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+
+}
+
+.loading-heart span {
+
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #a52df4;
+  animation: loading-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+
+}
+
+.loading-heart span:after,
+.loading-heart span:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #a52df4;
+}
+
+.loading-heart span:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.loading-heart span:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes loading-heart {
+
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
